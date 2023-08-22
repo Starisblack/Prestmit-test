@@ -1,4 +1,16 @@
 :root {
   font-family: 'Manrope', sans-serif;
- 
+  box-sizing: border-box;
+  margin: 0;
+  --primaryColor: #0A2640;
+}
+
+body{
+  margin: 0;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
