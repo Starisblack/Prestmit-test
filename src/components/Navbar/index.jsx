@@ -13,6 +13,7 @@ const Navbar = () => {
         boxSizing: "border-box",
         width: "100%",
         position: "absolute",
+        zIndex: 1000,
         top: {xs: 20, sm: 56},
         paddingX: { xs: "5vw", md: "100px" },
       }}

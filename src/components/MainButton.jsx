@@ -1,25 +1,22 @@
 import { Button } from "@mui/material";
 import PropTypes from "prop-types";
 
-const MainButton = ({ text, ...other}) => {
+const MainButton = ({ text, variant, fSize, padding, radius, color, bgColor,  ...other}) => {
   const buttonStyle = {
-    color: "#0A2640",
+    color: color,
     textTransform: "inherit",
-    padding: "4px 40px",
-    borderRadius: "24px",
-    border: "2px solid #FFF",
-    backgroundColor: "#FFF",
-    fontSize: "16px",
-    lineHeight: "24px",
+    padding: padding,
+    borderRadius: radius,
+    backgroundColor: bgColor,
+    fontSize: fSize,
     fontWeight: 700,
-
     ":hover": {
-      backgroundColor: "white",
+      backgroundColor: bgColor
     },
   };
 
   return (
-    <Button sx={buttonStyle} {...other}  disableElevation>
+    <Button variant={variant} sx={{...buttonStyle, ...other}} {...other}  disableElevation>
       {text}
     </Button>
   );
@@ -28,5 +25,12 @@ const MainButton = ({ text, ...other}) => {
 export default MainButton;
 
 MainButton.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  lineHeight: PropTypes.string,
+  fSize: PropTypes.string,
+  radius: PropTypes.string,
+  padding: PropTypes.string,
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
+  variant: PropTypes.string,
 };

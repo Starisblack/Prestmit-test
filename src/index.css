@@ -1,12 +1,13 @@
 :root {
-  font-family: 'Manrope', sans-serif;
   box-sizing: border-box;
   margin: 0;
+  --manrope:  'Manrope', sans-serif;
   --primaryColor: #0A2640;
 }
 
 body{
   margin: 0;
+  /* font-family: 'Manrope', sans-serif !important; */
 }
 
 img{
