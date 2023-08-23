@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   --manrope:  'Manrope', sans-serif;
+  --openSan:  'Open Sans', sans-serif;
   --primaryColor: #0A2640;
 }
 
