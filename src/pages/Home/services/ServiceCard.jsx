@@ -5,7 +5,7 @@ import { arrow } from "../../../assets/service";
 const ServiceCard = ({ img, title }) => {
   return (
     <>
-      <Box sx={{width: 300, maxWidth: "100%", textAlign: "left" }}>
+      <Box sx={{width: 300, maxWidth: "100%", textAlign: "left", margin: "0 auto" }}>
         <Box sx={{ height: 354}}>
           <img  src={img} />
         </Box>
@@ -54,11 +54,11 @@ const ServiceCard = ({ img, title }) => {
             >
               Explore page
             </Typography>
-            <IconButton>
+            <IconButton sx={{padding: 0.2}}>
               <img src={arrow} alt="arrow" />
             </IconButton>
           </Stack>
-          <Divider sx={{ backgroundColor: "var(--primaryColor)" }} />
+          <Divider sx={{ backgroundColor: "var(--primaryColor)", marginTop: 1 }} />
         </Stack>
       </Box>
     </>

@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Navbar from "../../components/Navbar";
 import { ellipse } from "../../assets/hero";
 import Services from "./services";
+import Testimonial from "./testimonial";
 
 const Homepage = () => {
   return (
@@ -24,6 +25,7 @@ const Homepage = () => {
       <Navbar />
       <Hero />
       <Services />
+      <Testimonial />
     </Box>
   );
 };

@@ -1,6 +1,11 @@
-import { Container, Grid, Typography } from "@mui/material";
-import { feature1, feature2, feature3 } from "../../../assets/service";
+import {Container, Grid, Typography } from "@mui/material";
+import {
+  feature1,
+  feature2,
+  feature3,
+} from "../../../assets/service";
 import ServiceCard from "./ServiceCard";
+import Features from "./features";
 
 const Services = () => {
   const serviceList = [
@@ -10,6 +15,8 @@ const Services = () => {
 
     { id: 3, img: feature3, title: "Cool feature title" },
   ];
+
+
   return (
     <>
       <Container
@@ -17,7 +24,6 @@ const Services = () => {
           maxWidth: { lg: "100%" },
           textAlign: "center",
           paddingTop: "84px",
-          paddingBottom: "120px",
           paddingX: { md: "10vw", lg: "150px" },
         }}
       >
@@ -43,14 +49,24 @@ const Services = () => {
         >
           Handshake infographic mass market crowdfunding iteration.
         </Typography>
-        <Grid container justifyContent={{xs: "center", lg: "flex-start"}} gap={{xs: "40px", lg: "100px"}} sx={{ marginTop: "80px" }}>
+
+        {/* features grid */}
+        <Grid
+          container
+          justifyContent={{ xs: "center", lg: "flex-start" }}
+          gap={{ xs: "70px", sm: "50px", lg: "80px" }}
+          sx={{ marginTop: "80px" }}
+        >
           {serviceList.map((el) => (
-            <Grid key={el.id} item xs={12} sm={5} md={4} lg={3}>
+            <Grid key={el.id} item xs={12} sm={5} md={4} lg={3.3}>
               <ServiceCard img={el.img} title={el.title} />
             </Grid>
           ))}
         </Grid>
       </Container>
+    
+       <Features />
+ 
     </>
   );
 };

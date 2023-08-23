@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        // minHeight: "100vh",
         paddingTop: "162px",
         paddingBottom: "64px",
         backgroundColor: "#0A2640",
