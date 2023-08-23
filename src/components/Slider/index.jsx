@@ -15,10 +15,10 @@ const Slider = () => {
         watchSlidesProgress={true}
         slidesPerView={6}
         spaceBetween={10}
-        speed="1000"
+        speed="1200"
         loop={true}
         autoplay={{
-          delay: 300,
+          delay: 50,
           disableOnInteraction: false,
         }}
         centeredSlides={true}

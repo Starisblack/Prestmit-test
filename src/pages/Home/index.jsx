@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Hero from "./Hero";
 import Navbar from "../../components/Navbar";
 import { ellipse } from "../../assets/hero";
+import Services from "./services";
 
 const Homepage = () => {
   return (
@@ -22,6 +23,7 @@ const Homepage = () => {
 
       <Navbar />
       <Hero />
+      <Services />
     </Box>
   );
 };
