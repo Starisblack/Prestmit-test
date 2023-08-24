@@ -12,6 +12,7 @@ const TestimonialCard = ({content, img, name, title}) => {
         padding: "40px",
         borderRadius: "12px",
         bgcolor: "white",
+        margin: "0 auto",
         boxShadow: "0px 12px 32px 0px rgba(0, 0, 0, 0.12);",
       }}
       spacing={5}

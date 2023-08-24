@@ -1,9 +1,12 @@
-import { Container, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import TestimonialCard from "./TestimonialCard";
 import { albus, harry, severus } from "../../../assets/testimonial";
+import TestimonialSlider from "../../../components/Slider/TestimonialSlider";
+import useResponsive from "../../../hooks/useResponsive";
 
 const Testimonial = () => {
+  const isDesktop = useResponsive("up", "md");
   const testimonialData = [
     {
       id: 1,
@@ -63,15 +66,11 @@ const Testimonial = () => {
             spacing={3.5}
             alignSelf={"flex-end"}
           >
-            <IconButton
-              sx={navigationBtnStyling}
-            >
+            <IconButton sx={navigationBtnStyling}>
               <ArrowLeft color="#0A2640" size={32} />
             </IconButton>
 
-            <IconButton
-              sx={navigationBtnStyling}
-            >
+            <IconButton sx={navigationBtnStyling}>
               <ArrowRight color="#0A2640" size={32} />
             </IconButton>
           </Stack>
@@ -79,26 +78,44 @@ const Testimonial = () => {
 
         {/* testimonial sliding  */}
 
-        <Stack
-          marginTop={"72px"}
-          spacing={{ md: 2.75 }}
-          direction="row"
-          sx={{
-            justifyContent: { xs: "center", md: "flex-start" },
-            flexWrap: { xs: "wrap", md: "nowrap" },
-            gap: { xs: "50px", md: 0 },
-          }}
-        >
-          {testimonialData.map((el) => (
-            <TestimonialCard
-              key={el.id}
-              name={el.name}
-              img={el.img}
-              content={el.content}
-              title={el.title}
-            />
-          ))}
-        </Stack>
+        {isDesktop && (
+          <Stack
+            marginTop={"72px"}
+            spacing={{ md: 2.75 }}
+            direction="row"
+            sx={{
+              justifyContent: { xs: "center", md: "flex-start" },
+              flexWrap: { xs: "wrap", md: "nowrap" },
+              gap: { xs: "50px", md: 0 },
+            }}
+          >
+            {testimonialData.map((el) => (
+              <TestimonialCard
+                key={el.id}
+                name={el.name}
+                img={el.img}
+                content={el.content}
+                title={el.title}
+              />
+            ))}
+          </Stack>
+        )}
+
+        {!isDesktop && (
+          <Box marginTop="72px">
+            <TestimonialSlider>
+              {testimonialData.map((el) => (
+                <TestimonialCard
+                  key={el.id}
+                  name={el.name}
+                  img={el.img}
+                  content={el.content}
+                  title={el.title}
+                />
+              ))}
+            </TestimonialSlider>
+          </Box>
+        )}
       </Container>
     </>
   );
