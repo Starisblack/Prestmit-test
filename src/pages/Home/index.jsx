@@ -6,6 +6,8 @@ import Services from "./services";
 import Testimonial from "./Testimonial";
 import FaqSection from "./Faq";
 import Blog from "./Blog";
+import Cta from "./Cta";
+import Footer from "../../components/Footer";
 
 
 const Homepage = () => {
@@ -31,6 +33,8 @@ const Homepage = () => {
       <Testimonial />
       <FaqSection />
       <Blog />
+      <Cta />
+      <Footer />
     </Box>
   );
 };

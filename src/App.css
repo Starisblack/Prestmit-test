@@ -4,7 +4,32 @@
   box-sizing: border-box;
 }
 
+.email-input {
+  width: 60%;
+  height: 56px;
+  border-radius: 240px;
+  border: 2px solid #fff;
+  background: #fff;
+  padding-left: 32px;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
 
+@media (max-width: 954px) {
+  .email-input{
+    width: 50%;
+  }
+}
+
+@media (max-width: 754px) {
+  .email-input{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 
 /* image sliding styling */
 .swiper {

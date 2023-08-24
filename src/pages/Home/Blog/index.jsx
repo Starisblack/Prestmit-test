@@ -76,7 +76,7 @@ const Blog = () => {
           direction="row"
           spacing={{md: 6.25}}
           sx={{
-            justifyContent: { xs: "center", md: "flex-start" },
+            justifyContent: "center",
             flexWrap: { xs: "wrap", md: "nowrap" },
             gap: { xs: "70px", md: 0 },
             marginTop: "79px",
