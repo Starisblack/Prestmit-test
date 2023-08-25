@@ -76,6 +76,7 @@ const FeatureTwo = () => {
             </Stack>
           </Box>
 
+         {/* feature two right content */}
           <Box
             sx={{
               ...FeatureTwoStyles.imgBox,

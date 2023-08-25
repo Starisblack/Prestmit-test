@@ -15,9 +15,9 @@ const PrimaryButton = ({ text, color, size, bgColor, ...other }) => {
   const largeBtnStyling = {
     color: color,
     borderRadius: "56px",
-    padding: "16px 56px",
+    padding: {xs:"8px 20px", sm:"16px 56px"},
     fontFamily: "var(--openSan)",
-    fontSize: "20px",
+    fontSize: {xs: "16px", sm:"20px"},
     lineHeight: "28px",
   };
 

@@ -2,7 +2,7 @@ const styles = {
   header: {
     fontFamily: "var(--manrope)",
     fontWeight: 400,
-    fontSize: {xs: "22px", sm: "40px", lg: "48px" },
+    fontSize: {xs: "24px", sm: "40px", lg: "48px" },
     lineHeight: {xs: "35px",  sm: "60px",  lg: "72px"},
   },
 
@@ -19,25 +19,25 @@ const styles = {
     lineHeight: "32px",
     color: "gray"
   },
-
+ 
   paragraph: {
     fontWeight: 400,
-    fontSize: {xs: "12px", sm: "16px"},
+    fontSize: {xs: "14px", sm: "16px"},
     lineHeight: "28px",
     fontFamily: "var(--openSan)",
   },
 
   textM: {
     fontFamily: "var(--openSan)",
-    fontSize: { xs: "14px", sm: "24px" },
-    lineHeight: {xs: "28px", sm: "36px"},
+    fontSize: { xs: "16px", sm: "24px" },
+    lineHeight: {sm: "36px"},
     fontWeight: 400,
   },
 
   textS: {
     fontFamily: "var(--openSan)",
-    fontSize: { xs: "12px", sm: "20px" },
-    lineHeight: "32px",
+    fontSize: { xs: "14px", sm: "20px" },
+    lineHeight: {sm:"32px"},
     fontWeight: 400,
   },
 

@@ -43,6 +43,7 @@ const ServiceCard = ({ img, title }) => {
             color: "#777777",
             marginTop: { sm: "12px" },
             marginBottom: { sm: "28px" },
+            width: {xs: "90%", sm: "100%"}
           }}
         >
           Learning curve network effects return on investment.

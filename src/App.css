@@ -25,10 +25,19 @@
 
 @media (max-width: 754px) {
   .email-input{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
   }
 }
+
+@media (max-width: 600px) {
+  .email-input{
+   height: auto;
+   padding: 8px 20px;
+   font-size: 14px;
+  }
+}
+
 
 /* image sliding styling */
 .swiper {

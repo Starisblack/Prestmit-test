@@ -45,7 +45,7 @@ const BlogCard = ({ desc, contentImg, profileImg, name }) => {
             <Typography
               sx={{
                 ...styles.textS,
-                lineHeight: "32px",
+                lineHeight: {sm: "32px"},
                 color: "var(--primaryColor)",
                 marginBottom: "20px",
               }}
