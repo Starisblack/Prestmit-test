@@ -24,9 +24,9 @@ const Hero = () => {
           paddingX: { xs: "5vw", lg: "100px" },
         }}
       >
-        <Grid container  spacing={{md: "80px" , lg: "145px"}} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
+        <Grid container  justifyContent={"space-between"} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
           {/* hero left */}
-          <Grid item xs={12} md={6.4}>
+          <Grid item xs={12} md={5.67}>
             <Box
               sx={{
                 // width: 567,
@@ -63,7 +63,7 @@ const Hero = () => {
           </Grid>
 
           {/* hero right */}
-          <Grid item xs={12} md={5.6}>
+          <Grid item xs={12} md={4.94}>
             <Box
               sx={{
                 margin: "0 auto",
