@@ -21,7 +21,7 @@ const FAQSection = () => {
     <>
       <Container
         sx={{
-          maxWidth: { lg: "100%" },
+          maxWidth: { lg: 1400 },
           padding: { xs: "80px 20px", lg: "124px  150px 79px  150px" },
         }}
       >
@@ -37,7 +37,7 @@ const FAQSection = () => {
           }}
         ></Box>
 
-        <Grid container columnSpacing={5}>
+        <Grid container spacing={{md: 12.5}}>
           <Grid item xs={12} md={6}>
             <Typography
               sx={{

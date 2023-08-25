@@ -17,19 +17,19 @@ const Hero = () => {
     >
       <Container
         sx={{
-          maxWidth: { lg: "100%" },
+          maxWidth: { lg: 1400 },
           position: "relative",
           zIndex: 700,
           textAlign: { xs: "center", md: "left" },
           paddingX: { xs: "5vw", lg: "100px" },
         }}
       >
-        <Grid container gap={{ xs: 7, md: 0 }} alignItems={"center"}>
+        <Grid container  spacing={{md: "80px" , lg: "139px"}} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
           {/* hero left */}
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6.4}>
             <Box
               sx={{
-                width: 567,
+                // width: 567,
                 maxWidth: "100%",
                 marginX: { xs: "auto", md: 0 },
               }}
@@ -63,12 +63,12 @@ const Hero = () => {
           </Grid>
 
           {/* hero right */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5.6}>
             <Box
               sx={{
                 margin: "0 auto",
-                maxWidth: "100%",
-                width: "494px",
+                // maxWidth: "100%",
+                width: "100%",
                 height: "423px",
               }}
             >

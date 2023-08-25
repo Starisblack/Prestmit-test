@@ -19,7 +19,7 @@ const Footer = () => {
     <Container
       sx={{
         color: "gray",
-        maxWidth: { lg: "100%" },
+        maxWidth: { lg: 1400 },
         padding: { xs: "80px 20px", lg: "100px  179px 117px  100px" },
       }}
     >

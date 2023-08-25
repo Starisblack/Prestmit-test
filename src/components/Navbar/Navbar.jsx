@@ -7,17 +7,22 @@ import MobileNav from "./MobileNavBar";
 const Navbar = () => {
   const isMobile = useResponsive("down", "md");
 
+  const navBarStyling = {
+    margin: "0 auto",
+    boxSizing: "border-box",
+    width: "100%",
+    maxWidth: 1400,
+    position: "absolute",
+    left: 0,
+    right: 0,
+    zIndex: 1000,
+    top: {xs: 20, sm: 56},
+    paddingX: { xs: "5vw", lg: "100px" },
+  }
+
   return (
     <Box
-      sx={{
-        margin: "0 auto",
-        boxSizing: "border-box",
-        width: "100%",
-        position: "absolute",
-        zIndex: 1000,
-        top: {xs: 20, sm: 56},
-        paddingX: { xs: "5vw", lg: "100px" },
-      }}
+      sx={navBarStyling}
     >
       <Stack
         justifyContent={"space-between" }

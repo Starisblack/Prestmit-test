@@ -16,15 +16,20 @@ const ServiceCard = ({ img, title }) => {
     <>
       <Box
         sx={{
-          width: 300,
+          width: {xs: 300, sm: "100%"},
           maxWidth: "100%",
           textAlign: "left",
           margin: "0 auto",
         }}
       >
-        <Box sx={{ height: 354 }}>
-          <img src={img} />
-        </Box>
+        <Box
+          sx={{
+            height: {xs: 300, md: 354},
+            backgroundImage: `url(${img})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+          }}
+        ></Box>
 
         <Typography
           sx={{ ...styles.textM, marginTop: { xs: "16px", sm: "24px" } }}
@@ -66,8 +71,7 @@ const ServiceCard = ({ img, title }) => {
 
 export default ServiceCard;
 
-
 ServiceCard.propTypes = {
-    img: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  };
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

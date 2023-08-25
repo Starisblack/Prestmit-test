@@ -9,7 +9,7 @@ const PrimaryButton = ({ text, color, size, bgColor, ...other }) => {
     border: `2px solid ${bgColor}`,
     backgroundColor: bgColor,
     ":hover": {
-      backgroundColor: "transparent",
+      backgroundColor: bgColor,
     },
   };
   const largeBtnStyling = {

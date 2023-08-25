@@ -16,14 +16,14 @@ const Services = () => {
     <>
       <Container
         sx={{
-          maxWidth: { lg: "100%" },
+          maxWidth: { lg: 1400 },
           textAlign: "center",
           paddingTop: "84px",
           paddingX: { md: "10vw", lg: "150px" },
         }}
       >
         <Typography sx={styles.subHeader}>Our Services</Typography>
-        <Typography sx={styles.header}>
+        <Typography sx={{...styles.header, margin: "0 auto", width: "90%"}}>
           Handshake infographic mass market crowdfunding iteration.
         </Typography>
 
@@ -31,11 +31,12 @@ const Services = () => {
         <Grid
           container
           justifyContent={{ xs: "center", lg: "flex-start" }}
-          gap={{ xs: "70px", sm: "50px", lg: "80px" }}
-          sx={{ marginTop: "80px" }}
+          columnSpacing={{xs: 8, lg: 12.5}}
+          gap={{xs: 6,  md: 0 }}
+          sx={{ marginTop: "80px"}}
         >
           {serviceList.map((el) => (
-            <Grid key={el.id} item xs={12} sm={5} md={4} lg={3.3}>
+            <Grid key={el.id} item xs={12} sm={5} md={4}>
               <ServiceCard img={el.img} title={el.title} />
             </Grid>
           ))}

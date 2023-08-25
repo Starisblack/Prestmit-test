@@ -1,7 +1,7 @@
 const CTAStyles = {
   CTA_Container: {
     position: "relative",
-    width: { xs: "90%", lg: "100%" },
+    width: { xs: "85%", lg: 1400 },
     color: "white",
     textAlign: "center",
     borderRadius: "12px",

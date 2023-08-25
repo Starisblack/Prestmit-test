@@ -38,11 +38,10 @@ const Testimonial = () => {
   ];
   return (
     <>
+    <Box sx={{ bgcolor: "var(--primaryColor)",}}>
       <Container
         sx={{
-          bgcolor: "var(--primaryColor)",
-          maxWidth: { lg: "100%" },
-
+          maxWidth: { lg: 1440 },
           color: "white",
           padding: { xs: "80px 20px", lg: "96px  156px 96px  150px" },
         }}
@@ -115,7 +114,9 @@ const Testimonial = () => {
           </Box>
         )}
       </Container>
+      </Box>
     </>
+
   );
 };
 

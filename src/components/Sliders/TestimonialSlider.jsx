@@ -2,16 +2,15 @@ import { IconButton } from "@mui/material";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
-import useResponsive from "../../hooks/useResponsive";
 import PropTypes from "prop-types";
 
 const TestimonialSlider = ({ children }) => {
-  const isMobile = useResponsive("down", "sm");
+
 
   const navigationBtnStyling = {
     boxShadow: "0px 4px 32px 0px rgba(0, 0, 0, 0.08)",
-    backgroundColor: { xs: "black", sm: "white" },
-    ":hover": { backgroundColor: { xs: "black", sm: "white" }, opacity: 0.8 },
+    backgroundColor: "white",
+    ":hover": { backgroundColor: "white", opacity: 0.8 },
     width: { xs: 42, sm: 72 },
     height: { xs: 42, sm: 72 },
   };
@@ -19,12 +18,12 @@ const TestimonialSlider = ({ children }) => {
   const properties = {
     prevArrow: (
       <IconButton sx={navigationBtnStyling}>
-        <ArrowLeft color={isMobile ? "white" : "#0A2640"} size={32} />
+        <ArrowLeft color={"#0A2640"} size={32} />
       </IconButton>
     ),
     nextArrow: (
       <IconButton sx={navigationBtnStyling}>
-        <ArrowRight color={isMobile ? "white" : "#0A2640"} size={32} />
+        <ArrowRight color={"#0A2640"} size={32} />
       </IconButton>
     ),
   };

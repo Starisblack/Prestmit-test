@@ -7,7 +7,7 @@ import { CTAStyles } from "./CTAStyles";
 const CTASection = () => {
   return (
     <>
-      <Box sx={{ paddingBottom: "84px", padding: {} }}>
+      <Box sx={{ paddingBottom: "84px" }}>
         <Container sx={CTAStyles.CTA_Container}>
           <Box
             sx={{

@@ -7,9 +7,9 @@ const TestimonialCard = ({ content, img, name, title }) => {
     card: {
       height: "max-content",
       fontFamily: "var(--openSan)",
-      width: 270,
+      width: {xs: 200, sm: 270},
       maxWidth: "100%",
-      padding: { xs: "20px", sm: "40px" },
+      padding: { xs: "30px 15px", sm: "40px" },
       borderRadius: "12px",
       bgcolor: "white",
       margin: "0 auto",
@@ -17,8 +17,8 @@ const TestimonialCard = ({ content, img, name, title }) => {
     },
 
     avatar: {
-      width: 58,
-      height: 58,
+      width: {xs: 40, sm: 58},
+      height: {xs: 40, sm: 58},
       backgroundImage: `url(${img})`,
       backgroundSize: "contain",
       backgroundPosition: "center",
@@ -36,15 +36,14 @@ const TestimonialCard = ({ content, img, name, title }) => {
       >
         {content}
       </Typography>
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={2} alignItems={"center"}>
         <Box sx={cardStyling.avatar}></Box>
         <Stack>
           <Typography
             sx={{
               color: "var(--primaryColor)",
-              fontSize: "16px",
+              fontSize: {xs: "12px", sm:"16px"},
               fontWeight: 700,
-              lineHeight: "32px",
             }}
           >
             {name}
@@ -53,9 +52,9 @@ const TestimonialCard = ({ content, img, name, title }) => {
           <Typography
             sx={{
               color: "var(--primaryColor)",
-              fontSize: "14px",
+              fontSize: {xs: "10px", sm: "14px"},
               fontWeight: 400,
-              lineHeight: "32px",
+             
             }}
           >
             {title}
