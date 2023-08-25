@@ -38,7 +38,7 @@ const TestimonialCard = ({ content, img, name, title }) => {
       </Typography>
       <Stack direction="row" spacing={2} alignItems={"center"}>
         <Box sx={cardStyling.avatar}></Box>
-        <Stack>
+        <Stack spacing={0.75}>
           <Typography
             sx={{
               color: "var(--primaryColor)",

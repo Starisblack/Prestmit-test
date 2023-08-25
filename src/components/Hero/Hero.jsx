@@ -24,7 +24,7 @@ const Hero = () => {
           paddingX: { xs: "5vw", lg: "100px" },
         }}
       >
-        <Grid container  spacing={{md: "80px" , lg: "139px"}} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
+        <Grid container  spacing={{md: "80px" , lg: "145px"}} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
           {/* hero left */}
           <Grid item xs={12} md={6.4}>
             <Box
