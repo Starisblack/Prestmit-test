@@ -1,6 +1,6 @@
-import {Container, Grid, Typography } from "@mui/material";
-import { styles } from "../../globalStyles";
+import { Container, Grid, Typography } from "@mui/material";
 import { feature1, feature2, feature3 } from "../../assets/service";
+import { styles } from "../../globalStyles";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -12,7 +12,6 @@ const Services = () => {
     { id: 3, img: feature3, title: "Cool feature title" },
   ];
 
-
   return (
     <>
       <Container
@@ -23,14 +22,8 @@ const Services = () => {
           paddingX: { md: "10vw", lg: "150px" },
         }}
       >
-        <Typography
-          sx={styles.subHeader}
-        >
-          Our Services
-        </Typography>
-        <Typography
-          sx={styles.header}
-        >
+        <Typography sx={styles.subHeader}>Our Services</Typography>
+        <Typography sx={styles.header}>
           Handshake infographic mass market crowdfunding iteration.
         </Typography>
 
@@ -48,9 +41,6 @@ const Services = () => {
           ))}
         </Grid>
       </Container>
-    
-      
- 
     </>
   );
 };

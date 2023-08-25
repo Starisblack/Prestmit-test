@@ -1,7 +1,7 @@
 import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
-import PropTypes from "prop-types";
-import { arrow } from "../../assets/service";
 import { styles } from "../../globalStyles";
+import { arrow } from "../../assets/service";
+import PropTypes from "prop-types";
 
 const ServiceCard = ({ img, title }) => {
   const btnStyling = {
@@ -66,7 +66,8 @@ const ServiceCard = ({ img, title }) => {
 
 export default ServiceCard;
 
+
 ServiceCard.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  };
