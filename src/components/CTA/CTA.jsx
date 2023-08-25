@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { PrimaryButton } from "../Buttons";
-import ctaImg from "../../assets/Ellipse.png";
+import ctaImg from "../../assets/ellipse.png";
 import { styles } from "../../globalStyles";
 import { CTAStyles } from "./CTAStyles";
 
