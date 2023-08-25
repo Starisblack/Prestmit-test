@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 import { ellipse } from "../assets/hero";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import FAQSection from "../components/FAQ/FAQ"
+import FAQSection from "../components/Faq/Faq"
 import Services from "../components/Services/Services";
 
 const HomePage = () => {
