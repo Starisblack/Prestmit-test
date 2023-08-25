@@ -1,6 +1,5 @@
 import Blog from "../components/Blog/Blog";
 import Hero from "../components/Hero/Hero";
-import Services from "../components/services/Services";
 import Features from "../components/Features/Features";
 import Testimonial from "../components/Testimonial/Testimonial";
 import FaqSection from "../components/Faq/FAQ";
@@ -9,6 +8,7 @@ import { Box } from "@mui/material";
 import { ellipse } from "../assets/hero";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import Services from "../components/Services/Services";
 
 const HomePage = () => {
   return (

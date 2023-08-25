@@ -1,7 +1,7 @@
 import {Container, Grid, Typography } from "@mui/material";
-import ServiceCard from "./ServiceCard";
 import { styles } from "../../globalStyles";
 import { feature1, feature2, feature3 } from "../../assets/service";
+import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   const serviceList = [
