@@ -2,12 +2,12 @@ import Blog from "../components/Blog/Blog";
 import Hero from "../components/Hero/Hero";
 import Features from "../components/Features/Features";
 import Testimonial from "../components/Testimonial/Testimonial";
-import FaqSection from "../components/Faq/FAQ";
 import CTASection from "../components/CTA/CTA";
 import { Box } from "@mui/material";
 import { ellipse } from "../assets/hero";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import FAQSection from "../components/FAQ/FAQ"
 import Services from "../components/Services/Services";
 
 const HomePage = () => {
@@ -27,12 +27,11 @@ const HomePage = () => {
         }}
       ></Box>
       <Navbar />
-
       <Hero />
       <Services />
       <Features />
       <Testimonial />
-      <FaqSection />
+      <FAQSection />
       <Blog />
       <CTASection />
       <Footer />

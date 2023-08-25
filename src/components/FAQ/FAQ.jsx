@@ -11,7 +11,7 @@ import workstation from "../../assets/workstation.jpg";
 import { CaretCircleDown } from "@phosphor-icons/react";
 import { styles } from "../../globalStyles";
 
-const FaqSection = () => {
+const FAQSection = () => {
   const faqData = [
     "We connect our customers with the best?",
     "Android research & development rockstar?",
@@ -80,4 +80,4 @@ const FaqSection = () => {
   );
 };
 
-export default FaqSection;
+export default FAQSection;
