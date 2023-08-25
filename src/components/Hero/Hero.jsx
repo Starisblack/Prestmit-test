@@ -17,10 +17,11 @@ const Hero = () => {
     >
       <Container
         sx={{
+          maxWidth: { lg: "100%" },
           position: "relative",
           zIndex: 700,
           textAlign: { xs: "center", md: "left" },
-          paddingX: { md: "10vw", lg: 0 },
+          paddingX: { xs: "5vw", lg: "100px" },
         }}
       >
         <Grid container gap={{ xs: 7, md: 0 }} alignItems={"center"}>

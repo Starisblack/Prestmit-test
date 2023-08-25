@@ -2,8 +2,8 @@ const styles = {
   header: {
     fontFamily: "var(--manrope)",
     fontWeight: 400,
-    fontSize: { xs: "40px", lg: "48px" },
-    lineHeight: {xs: "60px",  lg: "72px"},
+    fontSize: {xs: "25px", sm: "40px", lg: "48px" },
+    lineHeight: {sx: "35px",  sm: "60px",  lg: "72px"},
   },
 
   header2: {

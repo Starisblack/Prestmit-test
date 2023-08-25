@@ -10,12 +10,13 @@ const Navbar = () => {
   return (
     <Box
       sx={{
+        margin: "0 auto",
         boxSizing: "border-box",
         width: "100%",
         position: "absolute",
         zIndex: 1000,
         top: {xs: 20, sm: 56},
-        paddingX: { xs: "5vw", md: "100px" },
+        paddingX: { xs: "5vw", lg: "100px" },
       }}
     >
       <Stack

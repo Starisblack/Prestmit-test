@@ -106,7 +106,7 @@ const Footer = () => {
       <Typography
         sx={{
           fontFamily: "var(--openSan)",
-          fontSize: "16px",
+          fontSize: {xs: "12px", sm:"16px"},
           marginTop: {xs: "20px", md: 0}
         }}
       >
