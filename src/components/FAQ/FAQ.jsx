@@ -7,8 +7,9 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import workstation from "../../../assets/workstation.jpg";
+import workstation from "../../assets/workstation.jpg";
 import { CaretCircleDown } from "@phosphor-icons/react";
+import { styles } from "../../globalStyles";
 
 const FaqSection = () => {
   const faqData = [
@@ -40,10 +41,7 @@ const FaqSection = () => {
           <Grid item xs={12} md={6}>
             <Typography
               sx={{
-                fontFamily: "var(--manrope)",
-                fontWeight: 400,
-                fontSize: { xs: "25px", lg: "36px" },
-                lineHeight: { xs: "35px", lg: "56px" },
+                ...styles.header2,
                 marginBottom: "40px",
               }}
             >
@@ -64,16 +62,7 @@ const FaqSection = () => {
                     />
                   }
                 >
-                  <Typography
-                    sx={{
-                      fontFamily: "var(--openSan)",
-                      fontSize: { xs: "14px", sm: "20px" },
-                      fontWeight: 400,
-                      lineHeight: { xs: "28px", sm: "32px" },
-                    }}
-                  >
-                    {el}
-                  </Typography>
+                  <Typography sx={styles.textS}>{el}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>

@@ -1,14 +1,34 @@
 import { Container, Stack, Typography } from "@mui/material";
 import BlogCard from "./BlogCard";
-import { feature1 } from "../../../assets/service";
+import { feature1 } from "../../assets/service";
 import {
   category2,
   category3,
   chandler,
   monica,
   rachel,
-} from "../../../assets/blog";
-import { SecondaryButton } from "../../../components/Buttons";
+} from "../../assets/blog";
+import { SecondaryButton } from "../Buttons";
+import { styles } from "../../globalStyles";
+
+// styling for blog section
+
+const BlogStyling = {
+  blogContainer: {
+    maxWidth: { lg: "100%" },
+    textAlign: "center",
+    paddingTop: "84px",
+    padding: { xs: "80px 20px", lg: "79px  201px 124px  201px" },
+  },
+
+  blog_list_container: {
+    justifyContent: "center",
+    flexWrap: { xs: "wrap", md: "nowrap" },
+    gap: { xs: "70px", md: 0 },
+    marginTop: "79px",
+    marginBottom: "84px",
+  },
+};
 
 const Blog = () => {
   const blogData = [
@@ -39,19 +59,10 @@ const Blog = () => {
   ];
   return (
     <>
-      <Container
-        sx={{
-          maxWidth: { lg: "100%" },
-          textAlign: "center",
-          paddingTop: "84px",
-          padding: { xs: "80px 20px", lg: "79px  201px 124px  201px" },
-        }}
-      >
+      <Container sx={BlogStyling.blogContainer}>
         <Typography
           sx={{
-            fontFamily: "var(--openSan)",
-            fontWeight: 400,
-            lineHeight: "32px",
+            ...styles.subHeader,
             color: "#777",
           }}
         >
@@ -59,11 +70,8 @@ const Blog = () => {
         </Typography>
         <Typography
           sx={{
+            ...styles.header,
             width: { xs: "95%", sm: "90%" },
-            fontFamily: "var(--manrope)",
-            fontSize: { xs: "20px", sm: "35px", md: "48px" },
-            fontWeight: 400,
-            lineHeight: { xs: "45px", md: "72px" },
             margin: "0 auto",
           }}
         >
@@ -74,14 +82,8 @@ const Blog = () => {
 
         <Stack
           direction="row"
-          spacing={{md: 6.25}}
-          sx={{
-            justifyContent: "center",
-            flexWrap: { xs: "wrap", md: "nowrap" },
-            gap: { xs: "70px", md: 0 },
-            marginTop: "79px",
-            marginBottom: "84px",
-          }}
+          spacing={{ md: 6.25 }}
+          sx={BlogStyling.blog_list_container}
         >
           {blogData.map((el) => (
             <BlogCard

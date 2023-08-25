@@ -1,9 +1,10 @@
 import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import TestimonialCard from "./TestimonialCard";
-import { albus, harry, severus } from "../../../assets/testimonial";
-import TestimonialSlider from "../../../components/Slider/TestimonialSlider";
-import useResponsive from "../../../hooks/useResponsive";
+import { albus, harry, severus } from "../../assets/testimonial";
+import TestimonialSlider from "../../components/Sliders/TestimonialSlider";
+import useResponsive from "../../hooks/useResponsive";
+import { styles } from "../../globalStyles";
 
 const Testimonial = () => {
   const isDesktop = useResponsive("up", "md");
@@ -49,11 +50,8 @@ const Testimonial = () => {
         <Stack direction={"row"} justifyContent="space-between">
           <Typography
             sx={{
+              ...styles.header,
               textAlign: { xs: "center", lg: "left" },
-              fontFamily: "var(--manrope)",
-              fontSize: { xs: "25px", sm: "48px" },
-              fontWeight: 400,
-              lineHeight: { xs: "38px", sm: "72px" },
               width: { xs: "100%", md: "65%" },
             }}
           >

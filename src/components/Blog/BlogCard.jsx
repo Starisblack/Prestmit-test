@@ -1,20 +1,34 @@
 import { Box, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import { styles } from "../../globalStyles";
 
 const BlogCard = ({ desc, contentImg, profileImg, name }) => {
+  // blog card styling
+
+  const blogCardStyling = {
+    card: {
+      width: 300,
+      fontWeight: 400,
+      textAlign: "left",
+    },
+    contentImg: {
+      height: 209,
+      borderRadius: "12px",
+      backgroundImage: `url(${contentImg})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+    },
+    cardTitle: {
+      fontFamily: "var(--openSan)",
+      fontSize: { xs: "14px", sm: "16px" },
+    },
+  };
+
   return (
     <>
-      <Stack sx={{ width: 300, fontWeight: 400, textAlign: "left" }}>
-        <Box
-          sx={{
-            height: 209,
-            borderRadius: "12px",
-            backgroundImage: `url(${contentImg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></Box>
+      <Stack sx={blogCardStyling.card}>
+        <Box sx={blogCardStyling.contentImg}></Box>
         <Stack justifyContent={"space-between"} flexGrow={1}>
           <Stack>
             <Stack
@@ -23,30 +37,14 @@ const BlogCard = ({ desc, contentImg, profileImg, name }) => {
               spacing={"12px"}
               sx={{ marginTop: "24px", marginBottom: "12px" }}
             >
-              <Typography
-                sx={{
-                  fontFamily: "var(--openSan)",
-                  fontSize: { xs: "14px", sm: "20px" },
-
-                  color: "var(--primaryColor)",
-                }}
-              >
-                Category
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: "12px", sm: "16px" },
-                  color: "gray",
-                  fontFamily: "var(--openSan)",
-                }}
-              >
+              <Typography sx={{...blogCardStyling.cardTitle, fontWeight: 700,  color: "var(--primaryColor)",}}>Category</Typography>
+              <Typography sx={blogCardStyling.cardTitle}>
                 November 22, 2021
               </Typography>
             </Stack>
             <Typography
               sx={{
-                fontFamily: "var(--openSan)",
-                fontSize: { xs: "14px", sm: "20px" },
+                ...styles.textS,
                 lineHeight: "32px",
                 color: "var(--primaryColor)",
                 marginBottom: "20px",

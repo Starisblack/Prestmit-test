@@ -1,12 +1,9 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { DotOutline } from "@phosphor-icons/react";
-import {
-  eye,
-  feather,
-  girlCalling,
-  pieGraph,
-  sun,
-} from "../../../../assets/service";
+
+import { styles } from "../../../globalStyles";
+import { FeatureTwoStyles } from "./FeatureTwoStyles";
+import { eye, feather, pieGraph, sun, girlCalling } from "../../../assets/service";
 
 const FeatureTwo = () => {
   const pieChartData = [
@@ -44,28 +41,15 @@ const FeatureTwo = () => {
 
   return (
     <>
-      <Container
-        sx={{
-          maxWidth: { lg: "100%" },
-          padding: { xs: "80px 20px", md: "112px  150px 224px  150px" },
-        }}
-      >
+      <Container sx={FeatureTwoStyles.sectionContainer}>
         <Stack
           direction={{ xs: "column-reverse", md: "row" }}
           alignItems={"center"}
           justifyContent={"center"}
-          spacing={{ xs: "210px", md: "80px" , lg: "210px" }}
+          spacing={{ xs: "210px", md: "80px", lg: "210px" }}
         >
           <Box sx={{ width: "493px", maxWidth: "100%" }}>
-            <Typography
-              sx={{
-                fontFamily: "var(--manrope)",
-                fontWeight: 400,
-                fontSize: { xs: "25px", lg: "36px" },
-                lineHeight: { xs: "35px", lg: "56px" },
-                marginBottom: "40px",
-              }}
-            >
+            <Typography sx={{ ...styles.header2, marginBottom: "40px" }}>
               We connect our customers with the best, and help them keep up-and
               stay open.
             </Typography>
@@ -80,24 +64,13 @@ const FeatureTwo = () => {
                     backgroundColor:
                       el.id !== 1 ? "white" : "var(--primaryColor)",
                     color: el.id !== 1 ? "black" : "white",
-                    padding: "16px 22px",
-                    borderRadius: "4px",
-                    boxShadow: "0px 4px 32px 0px rgba(0, 0, 0, 0.08)",
+                    ...FeatureTwoStyles.featureTags,
                   }}
                 >
                   <Box sx={{ height: 24, width: 24 }}>
                     <img src={el.icon} alt={el.title} />
                   </Box>
-                  <Typography
-                    sx={{
-                      fontFamily: "var(--manrope)",
-                      fontWeight: 400,
-                      fontSize: { xs: "12px", sm: "16px" },
-                      lineHeight: { xs: "normal", sm: "28px" },
-                    }}
-                  >
-                    {el.title}
-                  </Typography>
+                  <Typography sx={styles.title}>{el.title}</Typography>
                 </Stack>
               ))}
             </Stack>
@@ -105,33 +78,13 @@ const FeatureTwo = () => {
 
           <Box
             sx={{
-              width: "444px",
-              maxWidth: "100%",
-              margin: { xs: "0 auto", md: 0 },
-              height: "506px",
-              borderRadius: "24px",
+              ...FeatureTwoStyles.imgBox,
               backgroundImage: `url(${girlCalling})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              position: "relative",
             }}
           >
-            <Box
-              component="div"
-              sx={{
-                borderRadius: "12px",
-                boxShadow: "0px 4px 32px 0px #0000001F",
-                width: { xs: 171, lg: 227 },
-                padding: "32px",
-                backgroundColor: "white",
-                position: "absolute",
-                left: "48px",
-                bottom: "-169px",
-              }}
-            >
+            <Box component="div" sx={FeatureTwoStyles.floatingBox}>
               <Box sx={{ width: { xs: 170, lg: 227 }, marginBottom: "22px" }}>
-                <img src={pieGraph} />
+                <img src={pieGraph} alt="pie chart" />
               </Box>
 
               <Stack>

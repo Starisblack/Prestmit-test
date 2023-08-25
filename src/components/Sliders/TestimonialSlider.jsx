@@ -3,6 +3,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import useResponsive from "../../hooks/useResponsive";
+import PropTypes from "prop-types";
 
 const TestimonialSlider = ({ children }) => {
   const isMobile = useResponsive("down", "sm");
@@ -62,3 +63,7 @@ const TestimonialSlider = ({ children }) => {
 };
 
 export default TestimonialSlider;
+
+TestimonialSlider.propTypes = {
+  children: PropTypes.node,
+};

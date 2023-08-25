@@ -1,11 +1,7 @@
 import {Container, Grid, Typography } from "@mui/material";
-import {
-  feature1,
-  feature2,
-  feature3,
-} from "../../../assets/service";
 import ServiceCard from "./ServiceCard";
-import Features from "./features";
+import { styles } from "../../globalStyles";
+import { feature1, feature2, feature3 } from "../../assets/service";
 
 const Services = () => {
   const serviceList = [
@@ -28,29 +24,17 @@ const Services = () => {
         }}
       >
         <Typography
-          sx={{
-            fontFamily: "var(--openSan)",
-            fontWeight: 400,
-            lineHeight: "32px",
-            color: "#777",
-          }}
+          sx={styles.subHeader}
         >
           Our Services
         </Typography>
         <Typography
-          sx={{
-            width: { xs: "95%", sm: "80%" },
-            fontFamily: "var(--manrope)",
-            fontSize: { xs: "20px", sm: "35px", md: "48px" },
-            fontWeight: 400,
-            lineHeight: { xs: "45px", md: "72px" },
-            margin: "0 auto",
-          }}
+          sx={styles.header}
         >
           Handshake infographic mass market crowdfunding iteration.
         </Typography>
 
-        {/* features grid */}
+        {/* services grid */}
         <Grid
           container
           justifyContent={{ xs: "center", lg: "flex-start" }}
@@ -65,7 +49,7 @@ const Services = () => {
         </Grid>
       </Container>
     
-       <Features />
+      
  
     </>
   );
