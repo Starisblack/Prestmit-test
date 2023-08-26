@@ -94,6 +94,8 @@ const Hero = () => {
         {/* logo sliding */}
         <Box
           sx={{
+            paddingTop: "28px",
+            paddingBottom: "23px",
             marginTop: "56px",
             height: "max-content",
             position: "relative",
@@ -101,7 +103,9 @@ const Hero = () => {
         >
           <Box
             sx={{
+              top: 0,
               height: "93px",
+               paddingX: "14px",
               zIndex: 400,
               position: "absolute",
               boxSizing: "border-box",
