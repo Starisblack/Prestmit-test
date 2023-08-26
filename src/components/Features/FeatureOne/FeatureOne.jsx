@@ -4,12 +4,13 @@ import { guyCalling, barChart } from "../../../assets/service";
 import { styles } from "../../../globalStyles";
 import Animation from "../../../utils/Animation";
 import { PrimaryButton } from "../../Buttons";
+import useResponsive from "../../../hooks/useResponsive";
 
 const featureOneStyling = {
   imgBox: {
     width: "494px",
     maxWidth: "100%",
-    margin: { xs: "0 auto", md: 0 },
+    margin: { xs: "0 auto !important",  lg: 0 },
     height: "506px",
     borderRadius: "24px",
     backgroundImage: `url(${guyCalling})`,
@@ -32,6 +33,9 @@ const featureOneStyling = {
 };
 
 const FeatureOne = () => {
+
+  const isMobile = useResponsive("down", "sm")
+  
   const serviceDetail = [
     "We connect our customers with the best.",
     "Advisor success customer launch party.",
@@ -106,7 +110,7 @@ const FeatureOne = () => {
                   spacing={3.3}
                 >
                   <CheckCircle
-                    size={36}
+                    size={isMobile ? 20 : 36}
                     weight="fill"
                     color="var(--primaryColor)"
                   />

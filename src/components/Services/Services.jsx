@@ -30,7 +30,6 @@ const Services = () => {
         {/* services grid */}
         <Grid
           container
-          justifyContent={{ xs: "center", lg: "flex-start" }}
           columnSpacing={{xs: 8, lg: 12.5}}
           gap={{xs: 6,  md: 0 }}
           sx={{ marginTop: "80px"}}
