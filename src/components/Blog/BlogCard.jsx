@@ -29,7 +29,7 @@ const BlogCard = ({ desc, contentImg, profileImg, name }) => {
 
   return (
     <>
-      <Animation type="fade-up" data-aos-duration="2000">
+      <Animation type="fade-up" data-aos-duration="1000">
         <Stack sx={blogCardStyling.card}>
           <Box sx={blogCardStyling.contentImg}></Box>
           <Stack justifyContent={"space-between"} flexGrow={1}>
