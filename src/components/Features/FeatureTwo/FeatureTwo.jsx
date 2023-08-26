@@ -10,7 +10,7 @@ import {
   sun,
   girlCalling,
 } from "../../../assets/service";
-import Animation from "../../../utils/animation";
+import Animation from "../../../utils/Animation";
 
 const FeatureTwo = () => {
   const pieChartData = [

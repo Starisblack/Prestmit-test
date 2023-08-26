@@ -3,7 +3,7 @@ import { PrimaryButton } from "../Buttons";
 import ctaImg from "../../assets/ellipse.png";
 import { styles } from "../../globalStyles";
 import { CTAStyles } from "./CTAStyles";
-import Animation from "../../utils/animation";
+import Animation from "../../utils/Animation";
 
 const CTASection = () => {
   return (

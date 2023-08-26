@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { styles } from "../../globalStyles";
-import Animation from "../../utils/animation";
+import Animation from "../../utils/Animation";
 
 const BlogCard = ({ desc, contentImg, profileImg, name }) => {
   // blog card styling

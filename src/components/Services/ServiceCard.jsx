@@ -2,7 +2,7 @@ import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { styles } from "../../globalStyles";
 import { arrow } from "../../assets/service";
 import PropTypes from "prop-types";
-import Animation from "../../utils/animation";
+import Animation from "../../utils/Animation";
 
 const ServiceCard = ({ img, title }) => {
   const btnStyling = {

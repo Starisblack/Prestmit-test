@@ -2,7 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { CheckCircle } from "@phosphor-icons/react";
 import { guyCalling, barChart } from "../../../assets/service";
 import { styles } from "../../../globalStyles";
-import Animation from "../../../utils/animation";
+import Animation from "../../../utils/Animation";
 
 const featureOneStyling = {
   imgBox: {
