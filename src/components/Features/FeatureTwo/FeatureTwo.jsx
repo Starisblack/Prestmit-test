@@ -3,7 +3,14 @@ import { DotOutline } from "@phosphor-icons/react";
 
 import { styles } from "../../../globalStyles";
 import { FeatureTwoStyles } from "./FeatureTwoStyles";
-import { eye, feather, pieGraph, sun, girlCalling } from "../../../assets/service";
+import {
+  eye,
+  feather,
+  pieGraph,
+  sun,
+  girlCalling,
+} from "../../../assets/service";
+import Animation from "../../../utils/animation";
 
 const FeatureTwo = () => {
   const pieChartData = [
@@ -55,28 +62,29 @@ const FeatureTwo = () => {
             </Typography>
             <Stack spacing={1.75}>
               {featureTags.map((el) => (
-                <Stack
-                  key={el.id}
-                  direction={"row"}
-                  alignItems={"center"}
-                  spacing={1.75}
-                  sx={{
-                    backgroundColor:
-                      el.id !== 1 ? "white" : "var(--primaryColor)",
-                    color: el.id !== 1 ? "black" : "white",
-                    ...FeatureTwoStyles.featureTags,
-                  }}
-                >
-                  <Box sx={{ height: 24, width: 24 }}>
-                    <img src={el.icon} alt={el.title} />
-                  </Box>
-                  <Typography sx={styles.title}>{el.title}</Typography>
-                </Stack>
+                <Animation type="fade-up" data-aos-duration="1000" key={el.id}>
+                  <Stack
+                    direction={"row"}
+                    alignItems={"center"}
+                    spacing={1.75}
+                    sx={{
+                      backgroundColor:
+                        el.id !== 1 ? "white" : "var(--primaryColor)",
+                      color: el.id !== 1 ? "black" : "white",
+                      ...FeatureTwoStyles.featureTags,
+                    }}
+                  >
+                    <Box sx={{ height: 24, width: 24 }}>
+                      <img src={el.icon} alt={el.title} />
+                    </Box>
+                    <Typography sx={styles.title}>{el.title}</Typography>
+                  </Stack>
+                </Animation>
               ))}
             </Stack>
           </Box>
 
-         {/* feature two right content */}
+          {/* feature two right content */}
           <Box
             sx={{
               ...FeatureTwoStyles.imgBox,
@@ -84,32 +92,34 @@ const FeatureTwo = () => {
             }}
           >
             <Box component="div" sx={FeatureTwoStyles.floatingBox}>
-              <Box sx={{ width: { xs: 170, lg: 227 }, marginBottom: "22px" }}>
-                <img src={pieGraph} alt="pie chart" />
-              </Box>
+              <Animation type={"zoom-up"} data-aos-duration="1500">
+                <Box sx={{ width: { xs: 170, lg: 227 }, marginBottom: "22px" }}>
+                  <img src={pieGraph} alt="pie chart" />
+                </Box>
 
-              <Stack>
-                {pieChartData.map((el) => (
-                  <Stack
-                    key={el.title}
-                    direction={"row"}
-                    alignItems={"center"}
-                    spacing={0.5}
-                  >
-                    <DotOutline color={el.color} size={32} weight="fill" />
-                    <Typography
-                      sx={{
-                        fontFamily: "var(--manrope)",
-                        fontWeight: 400,
-                        fontSize: { xs: "11px", lg: "14px" },
-                        lineHeight: { xs: "normal", lg: "36px" },
-                      }}
+                <Stack>
+                  {pieChartData.map((el) => (
+                    <Stack
+                      key={el.title}
+                      direction={"row"}
+                      alignItems={"center"}
+                      spacing={0.5}
                     >
-                      {el.title}
-                    </Typography>
-                  </Stack>
-                ))}
-              </Stack>
+                      <DotOutline color={el.color} size={32} weight="fill" />
+                      <Typography
+                        sx={{
+                          fontFamily: "var(--manrope)",
+                          fontWeight: 400,
+                          fontSize: { xs: "11px", lg: "14px" },
+                          lineHeight: { xs: "normal", lg: "36px" },
+                        }}
+                      >
+                        {el.title}
+                      </Typography>
+                    </Stack>
+                  ))}
+                </Stack>
+              </Animation>
             </Box>
           </Box>
         </Stack>

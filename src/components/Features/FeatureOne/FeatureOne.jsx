@@ -2,6 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { CheckCircle } from "@phosphor-icons/react";
 import { guyCalling, barChart } from "../../../assets/service";
 import { styles } from "../../../globalStyles";
+import Animation from "../../../utils/animation";
 
 const featureOneStyling = {
   imgBox: {
@@ -52,33 +53,35 @@ const FeatureOne = () => {
         >
           <Box sx={featureOneStyling.imgBox}>
             <Box component="div" sx={featureOneStyling.floatingBox}>
-              <Box sx={{ width: 170, height: 227 }}>
-                <img src={barChart} />
-              </Box>
-              <Typography
-                sx={{
-                  marginTop: "19px",
-                  fontFamily: "var(--manrope)",
-                  color: "var(--primaryColor)",
-                  fontWeight: 700,
-                  fontSize: { xs: "16px", sm: "24px" },
-                  lineHeight: "36px",
-                }}
-              >
-                30%
-              </Typography>
+              <Animation type="fade-up" data-aos-duration="1000">
+                <Box sx={{ width: 170, height: 227 }}>
+                  <img src={barChart} />
+                </Box>
+                <Typography
+                  sx={{
+                    marginTop: "19px",
+                    fontFamily: "var(--manrope)",
+                    color: "var(--primaryColor)",
+                    fontWeight: 700,
+                    fontSize: { xs: "16px", sm: "24px" },
+                    lineHeight: "36px",
+                  }}
+                >
+                  30%
+                </Typography>
 
-              <Typography
-                sx={{
-                  fontFamily: "var(--manrope)",
-                  color: "var(--primaryColor)",
-                  fontWeight: 400,
-                  fontSize: { xs: "10px", sm: "14px" },
-                  lineHeight: "36px",
-                }}
-              >
-                More income in June
-              </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "var(--manrope)",
+                    color: "var(--primaryColor)",
+                    fontWeight: 400,
+                    fontSize: { xs: "10px", sm: "14px" },
+                    lineHeight: "36px",
+                  }}
+                >
+                  More income in June
+                </Typography>
+              </Animation>
             </Box>
           </Box>
 

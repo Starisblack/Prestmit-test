@@ -3,6 +3,7 @@ import { heroImg } from "../../assets/hero";
 import { PrimaryButton, SecondaryButton } from "../Buttons";
 import HeroSlider from "../Sliders/HeroSlider";
 import { styles } from "../../globalStyles";
+import Animation from "../../utils/animation";
 
 const Hero = () => {
   return (
@@ -24,42 +25,55 @@ const Hero = () => {
           paddingX: { xs: "5vw", lg: "100px" },
         }}
       >
-        <Grid container  justifyContent={"space-between"} rowSpacing={ {xs: 10 , md: 0}} alignItems={"center"}>
+        <Grid
+          container
+          justifyContent={"space-between"}
+          rowSpacing={{ xs: 10, md: 0 }}
+          alignItems={"center"}
+        >
           {/* hero left */}
           <Grid item xs={12} md={5.67}>
-            <Box
-              sx={{
-                // width: 567,
-                maxWidth: "100%",
-                marginX: { xs: "auto", md: 0 },
-              }}
-            >
-              <Typography sx={styles.header} variant="body1">
-                Save time by building fast with Boldo Template
-              </Typography>
-
-              <Typography sx={{ ...styles.paragraph, margin: "16px 0 40px 0" }}>
-                Funding handshake buyer business-to-business metrics iPad
-                partnership. First mover advantage innovator success deployment
-                non-disclosure.
-              </Typography>
-
-              <Stack
-                direction={{ xs: "column", sm: "row" }}
-                justifyContent={{ xs: "center", md: "left" }}
-                spacing={3}
-                marginTop={"40px"}
+            <Animation type="fade">  
+              <Box
+                sx={{
+                  // width: 567,
+                  maxWidth: "100%",
+                  marginX: { xs: "auto", md: 0 },
+                }}
               >
-                <PrimaryButton
-                  text="Buy template"
-                  color="var(--primaryColor)"
-                  bgColor={"#69E6A6"}
-                  size="large"
-                />
+                <Typography sx={styles.header} variant="body1">
+                  Save time by building fast with Boldo Template
+                </Typography>
 
-                <SecondaryButton text="Explore" color="white" border="white" />
-              </Stack>
-            </Box>
+                <Typography
+                  sx={{ ...styles.paragraph, margin: "16px 0 40px 0" }}
+                >
+                  Funding handshake buyer business-to-business metrics iPad
+                  partnership. First mover advantage innovator success
+                  deployment non-disclosure.
+                </Typography>
+
+                <Stack
+                  direction={{ xs: "column", sm: "row" }}
+                  justifyContent={{ xs: "center", md: "left" }}
+                  spacing={3}
+                  marginTop={"40px"}
+                >
+                  <PrimaryButton
+                    text="Buy template"
+                    color="var(--primaryColor)"
+                    bgColor={"#69E6A6"}
+                    size="large"
+                  />
+
+                  <SecondaryButton
+                    text="Explore"
+                    color="white"
+                    border="white"
+                  />
+                </Stack>
+              </Box>
+            </Animation>
           </Grid>
 
           {/* hero right */}
