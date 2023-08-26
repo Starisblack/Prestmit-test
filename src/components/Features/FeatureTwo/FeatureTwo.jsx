@@ -1,6 +1,5 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { DotOutline } from "@phosphor-icons/react";
-
 import { styles } from "../../../globalStyles";
 import { FeatureTwoStyles } from "./FeatureTwoStyles";
 import {

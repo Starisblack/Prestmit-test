@@ -5,9 +5,16 @@ import { albus, harry, severus } from "../../assets/testimonial";
 import TestimonialSlider from "../../components/Sliders/TestimonialSlider";
 import useResponsive from "../../hooks/useResponsive";
 import { styles } from "../../globalStyles";
+import { useRef } from "react";
 
 const Testimonial = () => {
   const isDesktop = useResponsive("up", "md");
+  const leftRef = useRef(null)
+  const rightRef = useRef(null)
+
+
+
+
   const testimonialData = [
     {
       id: 1,
@@ -29,6 +36,23 @@ const Testimonial = () => {
 
     {
       id: 3,
+      content:
+        "“Release facebook responsive web design business model canvas seed money monetization.”",
+      name: "Harry Potter",
+      img: harry,
+      title: "Team Leader @ Gryffindor",
+    },
+    {
+      id: 4,
+      content:
+        "“Release facebook responsive web design business model canvas seed money monetization.”",
+      name: "Harry Potter",
+      img: harry,
+      title: "Team Leader @ Gryffindor",
+    },
+
+    {
+      id: 5,
       content:
         "“Release facebook responsive web design business model canvas seed money monetization.”",
       name: "Harry Potter",
@@ -63,11 +87,11 @@ const Testimonial = () => {
             spacing={3.5}
             alignSelf={"flex-end"}
           >
-            <IconButton sx={navigationBtnStyling}>
-              <ArrowLeft color="#0A2640" size={32} />
+            <IconButton sx={navigationBtnStyling} onClick={()=> leftRef.current.click()}>
+              <ArrowLeft color="#0A2640" size={32}  />
             </IconButton>
 
-            <IconButton sx={navigationBtnStyling}>
+            <IconButton sx={navigationBtnStyling} onClick={()=> rightRef.current.click()}>
               <ArrowRight color="#0A2640" size={32} />
             </IconButton>
           </Stack>
@@ -75,7 +99,7 @@ const Testimonial = () => {
 
         {/* testimonial sliding  */}
 
-        {isDesktop && (
+        {/* {isDesktop && (
           <Stack
             marginTop={"72px"}
             spacing={{ md: 2.75 }}
@@ -88,6 +112,7 @@ const Testimonial = () => {
           >
             {testimonialData.map((el) => (
               <TestimonialCard
+                // marginLeft={el.id !== 1 ? "22px" : "0px"}
                 key={el.id}
                 name={el.name}
                 img={el.img}
@@ -96,11 +121,10 @@ const Testimonial = () => {
               />
             ))}
           </Stack>
-        )}
+        )} */}
 
-        {!isDesktop && (
           <Box marginTop="72px">
-            <TestimonialSlider>
+            <TestimonialSlider leftRef={leftRef} rightRef={rightRef} isDesktop={isDesktop}>
               {testimonialData.map((el) => (
                 <TestimonialCard
                   key={el.id}
@@ -112,7 +136,7 @@ const Testimonial = () => {
               ))}
             </TestimonialSlider>
           </Box>
-        )}
+
       </Container>
       </Box>
     </>

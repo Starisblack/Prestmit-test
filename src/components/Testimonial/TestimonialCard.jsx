@@ -27,7 +27,7 @@ const TestimonialCard = ({ content, img, name, title }) => {
   };
 
   return (
-    <Stack sx={cardStyling.card} spacing={5}>
+    <Stack sx={cardStyling.card} spacing={5} >
       <Typography
         sx={{
           ...styles.textM,
@@ -72,4 +72,5 @@ TestimonialCard.propTypes = {
   content: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  marginLeft: PropTypes.string,
 };
