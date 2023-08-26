@@ -1,5 +1,0 @@
-export {default as monica} from "./monica.png"
-export {default as chandler} from "./chandler.png"
-export {default as rachel} from "./rachel.png"
-export {default as category2} from "./category2.png"
-export {default as category3} from "./category3.png"
