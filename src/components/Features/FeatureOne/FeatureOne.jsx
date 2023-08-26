@@ -3,6 +3,7 @@ import { CheckCircle } from "@phosphor-icons/react";
 import { guyCalling, barChart } from "../../../assets/service";
 import { styles } from "../../../globalStyles";
 import Animation from "../../../utils/Animation";
+import { PrimaryButton } from "../../Buttons";
 
 const featureOneStyling = {
   imgBox: {
@@ -112,6 +113,13 @@ const FeatureOne = () => {
                 </Stack>
               ))}
             </Stack>
+            <Box marginTop={"56px"}>
+              <PrimaryButton
+                text={"Start now"}
+                color={"white"}
+                bgColor={"#0A2640"}
+              />
+            </Box>
           </Box>
         </Stack>
       </Container>

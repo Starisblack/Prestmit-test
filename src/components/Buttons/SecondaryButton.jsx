@@ -16,7 +16,7 @@ const SecondaryButton = ({ text, color, size, border, ...other }) => {
     borderRadius: "56px",
     padding: {xs:"8px 20px", sm:"16px 56px"},
     fontFamily: "var(--openSan)",
-    fontSize: {xs: "16px", sm:"20px"},
+    fontSize: {xs: "16px", sm:"14px", lg: "20px"},
     lineHeight: "28px",
   };
 

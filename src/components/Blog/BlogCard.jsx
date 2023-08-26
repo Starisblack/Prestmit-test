@@ -9,6 +9,7 @@ const BlogCard = ({ desc, contentImg, profileImg, name }) => {
   const blogCardStyling = {
     card: {
       width: 300,
+      maxWidth: "100%",
       fontWeight: 400,
       textAlign: "left",
     },
