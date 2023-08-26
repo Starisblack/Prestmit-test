@@ -43,7 +43,7 @@ const FeatureOne = () => {
       <Container
         sx={{
           maxWidth: { lg: "100%" },
-          padding: { xs: "80px 20px", md: "185px  107px 112px  156px" },
+          padding: { xs: "80px 20px", md: "185px  107px 72px  156px" },
         }}
       >
         <Stack
@@ -52,7 +52,7 @@ const FeatureOne = () => {
           justifyContent={"center"}
           spacing={{ xs: "150px" }}
         >
-          <Box sx={featureOneStyling.imgBox}>
+          <Box sx={{...featureOneStyling.imgBox, alignSelf: "flex-start"}}>
             <Box component="div" sx={featureOneStyling.floatingBox}>
               <Animation type="fade-up" data-aos-duration="1000">
                 <Box sx={{ width: 170, height: 227 }}>
@@ -90,6 +90,7 @@ const FeatureOne = () => {
             <Typography
               sx={{
                 ...styles.header2,
+                marginTop: "74px",
                 marginBottom: "40px",
               }}
             >
@@ -105,7 +106,7 @@ const FeatureOne = () => {
                   spacing={3.3}
                 >
                   <CheckCircle
-                    size={24}
+                    size={36}
                     weight="fill"
                     color="var(--primaryColor)"
                   />

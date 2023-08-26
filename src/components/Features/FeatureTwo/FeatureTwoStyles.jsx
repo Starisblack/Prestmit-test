@@ -1,7 +1,7 @@
 const FeatureTwoStyles = {
   sectionContainer: {
     maxWidth: { lg: "100%" },
-    padding: { xs: "80px 20px", md: "112px  150px 289px  150px" },
+    padding: { xs: "80px 20px", md: "112px  150px 269px  150px" },
   },
 
   featureTags: {
@@ -25,12 +25,12 @@ const FeatureTwoStyles = {
   floatingBox: {
     borderRadius: "12px",
     boxShadow: "0px 4px 32px 0px #0000001F",
-    width: { xs: 171, lg: 227 },
-    padding: "32px",
+    width: { xs: 170, lg: 227 },
+    padding: {xs: "32px", sm: "24px 32px 37px 32px"},
     backgroundColor: "white",
     position: "absolute",
     left: "48px",
-    bottom: "-169px",
+     top: "304px"
   },
 };
 

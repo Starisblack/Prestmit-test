@@ -92,11 +92,11 @@ const FeatureTwo = () => {
           >
             <Box component="div" sx={FeatureTwoStyles.floatingBox}>
               <Animation type={"zoom-up"} data-aos-duration="1500">
-                <Box sx={{ width: { xs: 170, lg: 227 }, marginBottom: "22px" }}>
+                <Box sx={{ width: 173, height: 173, marginBottom: "22px", margin: "0 auto" }}>
                   <img src={pieGraph} alt="pie chart" />
                 </Box>
 
-                <Stack>
+                <Stack spacing={1.5} marginTop={2.8}>
                   {pieChartData.map((el) => (
                     <Stack
                       key={el.title}

@@ -22,7 +22,7 @@ const Services = () => {
           paddingX: { md: "10vw", lg: "150px" },
         }}
       >
-        <Typography sx={styles.subHeader}>Our Services</Typography>
+        <Typography sx={{...styles.subHeader, marginBottom: "10px"}}>Our Services</Typography>
         <Typography sx={{...styles.header, margin: "0 auto", width: "90%"}}>
           Handshake infographic mass market crowdfunding iteration.
         </Typography>
