@@ -45,14 +45,23 @@ const Testimonial = () => {
     {
       id: 4,
       content:
-        "“Release facebook responsive web design business model canvas seed money monetization.”",
-      name: "Harry Potter",
-      img: harry,
-      title: "Team Leader @ Gryffindor",
+        "“Buyer buzz partner network disruptive non-disclosure agreement business”",
+      name: "Albus Dumbledore",
+      img: albus,
+      title: "Manager @ Howarts",
     },
 
     {
       id: 5,
+      content:
+        "“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”",
+      name: "Severus Snape",
+      img: severus,
+      title: "Manager @ Slytherin",
+    },
+
+    {
+      id: 6,
       content:
         "“Release facebook responsive web design business model canvas seed money monetization.”",
       name: "Harry Potter",
@@ -96,32 +105,6 @@ const Testimonial = () => {
             </IconButton>
           </Stack>
         </Stack>
-
-        {/* testimonial sliding  */}
-
-        {/* {isDesktop && (
-          <Stack
-            marginTop={"72px"}
-            spacing={{ md: 2.75 }}
-            direction="row"
-            sx={{
-              justifyContent: { xs: "center", md: "flex-start" },
-              flexWrap: { xs: "wrap", md: "nowrap" },
-              gap: { xs: "50px", md: 0 },
-            }}
-          >
-            {testimonialData.map((el) => (
-              <TestimonialCard
-                // marginLeft={el.id !== 1 ? "22px" : "0px"}
-                key={el.id}
-                name={el.name}
-                img={el.img}
-                content={el.content}
-                title={el.title}
-              />
-            ))}
-          </Stack>
-        )} */}
 
           <Box marginTop="72px">
             <TestimonialSlider leftRef={leftRef} rightRef={rightRef} isDesktop={isDesktop}>
