@@ -53,8 +53,8 @@ const HeroSlider = () => {
   return (
     <>
       <Slide
-        duration={300}
-        transitionDuration={1000}
+        duration={0}
+        transitionDuration={2000}
         responsive={responsiveSettings}
         slidesToScroll={1}
         slidesToShow={2}
