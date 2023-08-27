@@ -18,7 +18,7 @@ const BlogStyling = {
     maxWidth: { lg: "100%" },
     textAlign: "center",
     paddingTop: "84px",
-    padding: { xs: "80px 20px", lg: "79px  201px 124px  201px" },
+    padding: { xs: "80px 20px", lg: "59px  201px 124px  201px" },
   },
 
   blog_list_container: {

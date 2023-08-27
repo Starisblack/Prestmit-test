@@ -22,7 +22,7 @@ const FAQSection = () => {
       <Container
         sx={{
           maxWidth: { lg: 1400 },
-          padding: { xs: "80px 20px", lg: "124px  150px 79px  150px" },
+          padding: { xs: "80px 20px", lg: "124px  150px 59px  150px" },
         }}
       >
         <Box
